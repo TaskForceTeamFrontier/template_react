@@ -1,6 +1,10 @@
 "use client"
 
+import Image from "next/image";
 import { useState } from "react";
+import YouTube from "react-youtube";
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Home() {
 
@@ -26,8 +30,11 @@ export default function Home() {
     const [valueColor, setValueColor] = useState<string>('#000000');
     const handleChangeColor = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValueColor(event.target.value);
-      };
-
+    };
+    const opts = {
+        height: '390', width: '640',
+        playerVars: { autoplay: 1, },
+    };
     return (
         <>
             <div>
@@ -115,6 +122,17 @@ export default function Home() {
                     placeholder="Enter password"
                     className="border rounded px-2 py-1"
                     onChange={handleChangeColor}/>
+            </div>
+            <div>
+                <Image src="https://i.pinimg.com/736x/a0/a8/46/a0a846db2c036d3a8fcf739bb5707e43.jpg"
+                    width={500} height={500}
+                    alt="프로필 이미지"></Image>
+            </div>
+            <div>
+                <YouTube videoId="qiyTDxBjmIw" opts={opts}/>
+            </div>
+            <div>
+                <ReactPlayer url='https://vimeo.com/49824162' controls />
             </div>
         </>
     );

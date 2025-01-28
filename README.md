@@ -38,7 +38,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Reference
+## Installation / Reference & Library
 
 - [TailWind CSS](https://tailwindcss.com/)
 - [shadcn UI](https://ui.shadcn.com/)
+- [react-youtube](https://www.npmjs.com/package/react-youtube)
+    - npm install react-youtube
+- [react-player](https://www.npmjs.com/package/react-player)
+    - npm install react-player
+
+
