@@ -135,12 +135,6 @@ export default function Home() {
                 </video>
             </div>
             <div>
-                <video width="600" controls>
-                    <source src="https://youtu.be/IwzsrDrVHyY?feature=shared" />
-                    브라우저가 동영상을 지원하지 않습니다.
-                </video>
-            </div>
-            <div>
                 <YouTube videoId="qiyTDxBjmIw" opts={opts}/>
             </div>
             <div>
